@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 export function Nav(props) {
   const [navbarIsOpen, setNavbarIsOpen] = useState(false)
+  
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-primary">
         <div className="d-flex flex-grow-1">
