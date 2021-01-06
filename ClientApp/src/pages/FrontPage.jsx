@@ -5,10 +5,10 @@ export function FrontPage(props) {
 
   return (
   <>
-    <div className="jumbotron m-5">
+    <div className="jumbotron jumbotron-fluid p-5">
       <h1 className="display-5">Absolute Flooring & Kitchen Design</h1>
       <p className="lead">Exceptional Quality at Afforable Prices!</p>
-      <hr className="my-4" />
+      <hr className="my-3" />
       <p>Contact us for a free estimate</p>
       <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
     </div>
