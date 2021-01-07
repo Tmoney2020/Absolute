@@ -118,5 +118,41 @@ footer {
   margin-left: 25%;
 }
 
-.card-img {
+// Projects page
+
+.projectPictures {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftSideProjects {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  max-width: 500px;
+  max-height: 500px;
+  width: 100%;
+  align-items: center;
+}
+
+.mainProjectPhoto {
+  width: 100%;
+  height: auto;
+}
+
+.rightSideProjects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.smallProjectPhoto {
+  width: 200px;
+  height: 200px;
+  margin: 1rem;
 }
