@@ -5,7 +5,7 @@ export function Contact(props) {
 
   return (
     <>
-    <div className="jumbotron jumbotron-fluid p-5 jumboCenter">
+  <div className="jumbotron jumbotron-fluid p-5 jumboCenter mb-0">
     <div className="container">
       <h1 className="display-4">Contact Us</h1>
     </div>

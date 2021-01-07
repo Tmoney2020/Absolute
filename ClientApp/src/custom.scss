@@ -12,6 +12,35 @@
   min-height: 250px;
 }
 
+// Footer
+.wholePage {
+  position: relative;
+  min-height: 100vh;
+}
+
+.contentWrap {
+  padding-bottom: 75px;
+}
+
+footer {
+  background-color: #007bff;
+  width: 100%;
+  height: 75px;
+  bottom: 0;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+}
+
+.footer-contact {
+  color: rgb(255, 255, 255);
+}
+
+// Front Page
+
 .job {
   border: 3px solid black;
   padding: 10px;
@@ -31,20 +60,16 @@
   max-height: 200px;
 }
 
-footer {
-  background-color: #007bff;
-  width: 100%;
-  height: 75px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: rgb(255, 255, 255);
-  padding: 20px;
-  margin-top: 100%;
+.bannerContainer {
+  background-color: rgb(231, 229, 226);
 }
 
-.footer-contact {
-  color: rgb(255, 255, 255);
+.bannerContents {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 // Contact Us page
@@ -56,7 +81,11 @@ footer {
 .contactBoxes {
   display: flex;
   justify-content: space-evenly;
+  background-color: rgb(231, 229, 226);
+  padding-top: 2rem;
 }
+
+// About Us Page
 
 .aboutUs {
   background-color: rgb(231, 229, 226);
@@ -128,7 +157,7 @@ footer {
   align-items: center;
 }
 
-.leftSideProjects {
+.topProjects {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
@@ -143,7 +172,7 @@ footer {
   height: auto;
 }
 
-.rightSideProjects {
+.bottomProjects {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -155,4 +184,24 @@ footer {
   width: 200px;
   height: 200px;
   margin: 1rem;
+}
+
+.projectInfoContainer {
+  background-color: rgb(231, 229, 226);
+}
+
+.projectInfo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.description {
+  margin-top: 2rem;
+  max-width: 450px;
+}
+
+.materials {
+  margin-top: 2rem;
+  max-width: 450px;
 }
