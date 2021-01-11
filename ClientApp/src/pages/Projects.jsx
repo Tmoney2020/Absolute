@@ -18,9 +18,6 @@ export function Projects(props) {
     <img src="https://st.hzcdn.com/simgs/pictures/kitchens/queen-anne-whole-house-remodel-crd-design-build-img~6861f12b0c9b856f_4-6138-1-5dcf75d.jpg" alt="small photo grid" className="smallProjectPhoto"></img>
     <img src="https://st.hzcdn.com/simgs/pictures/kitchens/queen-anne-whole-house-remodel-crd-design-build-img~6861f12b0c9b856f_4-6138-1-5dcf75d.jpg" alt="small photo grid" className="smallProjectPhoto"></img>
     <img src="https://st.hzcdn.com/simgs/pictures/kitchens/queen-anne-whole-house-remodel-crd-design-build-img~6861f12b0c9b856f_4-6138-1-5dcf75d.jpg" alt="small photo grid" className="smallProjectPhoto"></img>
-    <img src="https://st.hzcdn.com/simgs/pictures/kitchens/queen-anne-whole-house-remodel-crd-design-build-img~6861f12b0c9b856f_4-6138-1-5dcf75d.jpg" alt="small photo grid" className="smallProjectPhoto"></img>
-    <img src="https://st.hzcdn.com/simgs/pictures/kitchens/queen-anne-whole-house-remodel-crd-design-build-img~6861f12b0c9b856f_4-6138-1-5dcf75d.jpg" alt="small photo grid" className="smallProjectPhoto"></img>
-
   </div>
 </div>
 <div className="projectInfoContainer">
