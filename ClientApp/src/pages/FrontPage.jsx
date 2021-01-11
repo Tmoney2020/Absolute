@@ -51,10 +51,27 @@ export function FrontPage(props) {
         </div>
       </div>
   <div className="bannerContainer">
-    <div className="bannerContents">
-      <h1>Respect, Quality, Afforable</h1>
+      <h1 className="productsTitle">Products & Brands</h1>
+   <div className="productsTotal">
+    <div>
+      <h3>Cabinets:</h3>
+      <p>Cabinet 1</p>
+      <p>Cabinet 2</p>
+      <p>Cabinet 3</p>
+      <p>Cabinet 4</p>
+      <p>Cabinet 5</p>
+  </div>
+    <div>
+      <h3>Flooring:</h3>
+      <p>Flooring 1</p>
+      <p>Flooring 2</p>
+      <p>Flooring 3</p>
+      <p>Flooring 4</p>
+      <p>Flooring 5</p>
+      <p>Flooring 6</p>
     </div>
   </div>
+</div>
   </>
   )
 }

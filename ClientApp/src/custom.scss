@@ -69,7 +69,17 @@ footer {
   height: 400px;
   display: flex;
   justify-content: center;
-  align-items: center;
+}
+
+.productsTitle {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.productsTotal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 // Contact Us page
