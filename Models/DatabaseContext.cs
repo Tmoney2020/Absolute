@@ -15,6 +15,7 @@ namespace Absolute.Models
 
 
         public DbSet<Project> Projects { get; set; }
+        public DbSet<Comment> Comments { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
