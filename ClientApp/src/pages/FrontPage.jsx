@@ -1,7 +1,28 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
+function SingleProjectForList (props) {
+  return (
+    <div className="job m-5">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFC9h2YBWRhibWKbdpHlLQpvDUmUcnzXCzSVaPsd_1FyS_tPebe1tNR-i8qQ&usqp=CAc" className="mr-3" alt="..." />
+      <div>
+        <h5 className="mt-1">
+          <a href="#">{props.project.title}</a>
+        </h5>
+        {props.project.shortDescription}
+      </div>
+    </div>
+  )
+}
 
 export function FrontPage(props) {
+  const [projects, SetProjects] = useState([])
+
+  useEffect(() => {
+    fetch('/api/Projects')
+      .then(response => response.json())
+      .then(apiData => {SetProjects(apiData)
+  })
+  }, [])
 
   return (
   <>
@@ -13,42 +34,12 @@ export function FrontPage(props) {
       <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
     </div>
       <div className="job-grid">
-        <div className="job m-5">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFC9h2YBWRhibWKbdpHlLQpvDUmUcnzXCzSVaPsd_1FyS_tPebe1tNR-i8qQ&usqp=CAc" className="mr-3" alt="..." />
-          <div>
-            <h5 className="mt-1">
-              <a href="#">Job 1</a>
-            </h5>
-            Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin.Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus.
-          </div>
-        </div>
-        <div className="job m-5">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGrm4L0My-OtgctZeBxQnqe9cNJWeYbrCJnw&usqp=CAU" className="grid-picture" alt="..." />
-          <div>
-            <h5 className="mt-1">
-              <a href="#">Job 2</a>
-            </h5>
-            Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudi.Donec lacinia congue felis in faucibus.
-          </div>
-        </div>
-        <div className="job m-5">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFC9h2YBWRhibWKbdpHlLQpvDUmUcnzXCzSVaPsd_1FyS_tPebe1tNR-i8qQ&usqp=CAc" className="mr-3" alt="..." />
-          <div>
-            <h5 className="mt-1">
-              <a href="#">Job 3</a>
-            </h5>
-            Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin.Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus.
-          </div>
-        </div>
-        <div className="job m-5">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFC9h2YBWRhibWKbdpHlLQpvDUmUcnzXCzSVaPsd_1FyS_tPebe1tNR-i8qQ&usqp=CAc" className="mr-3" alt="..." />
-          <div>
-            <h5 className="mt-1">
-              <a href="#">Job 4</a>
-            </h5>
-            Cras sit amet nibh libero, in gravida nulla.Nulla vel metus scelerisque ante sollicitudin.Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.Fusce condimentum nunc ac nisi vulputate fringilla.Donec lacinia congue felis in faucibus.
-          </div>
-        </div>
+        {projects.map(project => (
+        <SingleProjectForList 
+        key={project.id} 
+        project={project} 
+        />
+        ))}
       </div>
   <div className="bannerContainer">
       <h1 className="productsTitle">Products & Brands</h1>

@@ -15,7 +15,6 @@ import { Projects } from './pages/Projects'
 export function App() {
   const [navbarIsOpen, setNavbarIsOpen] = useState(false)
 
-
   return (
 <>
 <div className="wholePage">
