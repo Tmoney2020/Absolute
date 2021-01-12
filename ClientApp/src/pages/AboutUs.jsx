@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { useHistory } from 'react-router'
 
 
 function SingleCommentForList (props) {
@@ -21,7 +22,18 @@ function SingleCommentForList (props) {
 }
 
 export function AboutUs(props) {
+  const history = useHistory()
   const[comments, SetComments]= useState([])
+  const[newComment, SetNewComment] = useState({
+    name: '',
+    body: '',
+  })
+
+  const fetchComments = () => {
+    fetch(`api/Comments`)
+      .then(response => response.json())
+      .then(apiData => SetComments(apiData))
+  }
 
   useEffect(() => {
     fetch('/api/Comments')
@@ -29,6 +41,34 @@ export function AboutUs(props) {
       .then(apiData => {SetComments(apiData)
   })
   }, [])
+
+  const handleFormFieldChange = event => {
+      const whichFieldChanged = event.target.id
+      const newValueOfField = event.target.value
+
+      console.log(`The ${whichFieldChanged} was changed`)
+
+    SetNewComment({
+      ...newComment,
+      [whichFieldChanged]: newValueOfField,
+    })
+  }
+
+  const handleFormSubmit = event => {
+    event.preventDefault()
+
+    fetch('/api/Comments', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json'},
+      body: JSON.stringify(newComment),
+    }) 
+    .then(response => response.json())
+    .then(apiData => {
+      fetchComments()
+      SetNewComment({ ...newComment, name: '', body: '', })
+    })
+
+  }
 
 return (
 <>
@@ -44,17 +84,24 @@ return (
   choices of quality materials.
   </p>
 </div>
-  <form>
+  <form onSubmit={handleFormSubmit}>
     <section className="comments">
       <div className="commentContainer mt-4">
         <h1>Post a Comment</h1>
         <p className="text-center">Leave a here comment here.</p>
+        <input
+            maxLength="15"
+            placeholder="Name"
+            id="name"
+            value={newComment.name}
+            onChange={handleFormFieldChange}
+            />
           <textarea
             maxLength="75"
             placeholder="Add Comment"
-            id
-            value
-            onChange
+            id="body"
+            value={newComment.body}
+            onChange={handleFormFieldChange}
             />
           <button className="btn btn-primary mt-2" type="submit">
                 Post Comment
