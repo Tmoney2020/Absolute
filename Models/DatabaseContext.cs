@@ -14,7 +14,7 @@ namespace Absolute.Models
         private static bool LOG_SQL_STATEMENTS_IN_DEVELOPMENT = false;
 
 
-
+        public DbSet<Project> Projects { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
