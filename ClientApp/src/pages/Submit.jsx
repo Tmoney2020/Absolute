@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router'
+import { useDropzone } from 'react-dropzone'
+import Dropzone from 'react-dropzone'
+
 
 export function Submit(props) {
 const [errorMessage, setErrorMessage] = useState()
@@ -52,6 +55,35 @@ const handleToSubmit = event => {
       }
     })
 }
+
+const onDropFile = async acceptedFiles => {
+  const fileToUpload = acceptedFiles[0]
+  console.log(fileToUpload)
+
+  const formData = new FormData()
+
+  formData.append('file', fileToUpload)
+
+  const response = await fetch('/api/Uploads', {
+    method: 'POST',
+    headers: {},
+    body: formData,
+  })
+
+  if (response.status === 200) {
+    const apiResponse = await response.json()
+
+    const url = apiResponse.url
+
+    SetNewProject({ ...newProject, photoURL: url })
+  } else {
+    setErrorMessage('Unable to upload image')
+  }
+}
+
+const { getRootProps, getInputProps, isDragActive } = useDropzone({
+  onDrop: onDropFile,
+})
 
   return (
     <>
@@ -113,6 +145,26 @@ const handleToSubmit = event => {
                 onChange={handleInputFieldsForSubmit}
               ></textarea>
             </div>
+
+            <Dropzone onDrop={acceptedFiles => console.log(acceptedFiles)}>
+              {({getRootProps, getInputProps}) => (
+                <section className="alert alert-primary">
+                  <div {...getRootProps()}>
+                  <input {...getInputProps()} />
+                    <p>Drag 'n' drop some files here, or click to select files</p>
+                  </div>
+                </section>
+               )}
+            </Dropzone>
+            {/* <div className="file-drop-zone alert alert-primary">
+              <div {...getRootProps()}>
+                <input
+                {...getInputProps()} />
+                {isDragActive
+                  ? 'Drop the files here ...'
+                  : 'Drag a picture of the restaurant here to upload!'}
+              </div>
+          </div> */}
             <button class="btn btn-primary ml-3 mb-2" type="submit">
               Create Project
             </button>
