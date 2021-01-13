@@ -45,9 +45,7 @@ export function AboutUs(props) {
   const handleFormFieldChange = event => {
       const whichFieldChanged = event.target.id
       const newValueOfField = event.target.value
-
-      console.log(`The ${whichFieldChanged} was changed`)
-
+      
     SetNewComment({
       ...newComment,
       [whichFieldChanged]: newValueOfField,

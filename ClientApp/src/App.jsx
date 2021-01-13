@@ -9,6 +9,7 @@ import { Contact } from './pages/Contact'
 import { FrontPage } from './pages/FrontPage'
 import { AboutUs } from './pages/AboutUs'
 import { Projects } from './pages/Projects'
+import { Submit } from './pages/Submit'
 
 
 
@@ -32,6 +33,9 @@ export function App() {
   </Route>
   <Route path="/aboutUs">
     <AboutUs />
+  </Route> 
+  <Route path="/submit">
+    <Submit />
   </Route>
 </Switch>
 <Footer />
