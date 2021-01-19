@@ -49,6 +49,11 @@ footer {
   max-width: 400px;
 }
 
+.jobPhoto {
+  max-width: 100%;
+  max-height: inherit;
+}
+
 .job-grid {
   display: flex;
   flex-wrap: wrap;

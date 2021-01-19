@@ -14,6 +14,14 @@ title: '',
 shortDescription: '',
 longDescription: '',
 materials: '',
+photoURLGrid1: '',
+photoURLGrid2: '',
+photoURLGrid3: '',
+photoURLGrid4: '',
+photoURLGrid5: '',
+photoURLGrid6: '',
+photoURLGrid7: '',
+photoURLGrid8: '',
 })
 
 const handleInputFieldsForSubmit = event => {
@@ -145,18 +153,7 @@ const { getRootProps, getInputProps, isDragActive } = useDropzone({
                 onChange={handleInputFieldsForSubmit}
               ></textarea>
             </div>
-
-            <Dropzone onDrop={acceptedFiles => console.log(acceptedFiles)}>
-              {({getRootProps, getInputProps}) => (
-                <section className="alert alert-primary">
-                  <div {...getRootProps()}>
-                  <input {...getInputProps()} />
-                    <p>Drag 'n' drop some files here, or click to select files</p>
-                  </div>
-                </section>
-               )}
-            </Dropzone>
-            {/* <div className="file-drop-zone alert alert-primary">
+            <div className="file-drop-zone alert alert-primary">
               <div {...getRootProps()}>
                 <input
                 {...getInputProps()} />
@@ -164,7 +161,95 @@ const { getRootProps, getInputProps, isDragActive } = useDropzone({
                   ? 'Drop the files here ...'
                   : 'Drag a picture of the restaurant here to upload!'}
               </div>
-          </div> */}
+          </div>
+          <div className="form-group mr-3 ml-3">
+              <label for="exampleFormControlInput1">Photo URL 1:</label>
+              <input
+                type="text"
+                className="form-control"
+                id="photoURLGrid1"
+                placeholder="Example: Project 1"
+                value={newProject.photoURLGrid1}
+                onChange={handleInputFieldsForSubmit}
+              />
+            </div>
+            <div className="form-group mr-3 ml-3">
+              <label for="exampleFormControlInput1">Photo URL 2:</label>
+              <input
+                type="text"
+                className="form-control"
+                id="photoURLGrid2"
+                placeholder="Example: Project 1"
+                value={newProject.photoURLGrid2}
+                onChange={handleInputFieldsForSubmit}
+              />
+            </div>
+            <div className="form-group mr-3 ml-3">
+              <label for="exampleFormControlInput1">Photo URL 3:</label>
+              <input
+                type="text"
+                className="form-control"
+                id="photoURLGrid3"
+                placeholder="Example: Project 1"
+                value={newProject.photoURLGrid3}
+                onChange={handleInputFieldsForSubmit}
+              />
+            </div>
+            <div className="form-group mr-3 ml-3">
+              <label for="exampleFormControlInput1">Photo URL 4:</label>
+              <input
+                type="text"
+                className="form-control"
+                id="photoURLGrid4"
+                placeholder="Example: Project 1"
+                value={newProject.photoURLGrid4}
+                onChange={handleInputFieldsForSubmit}
+              />
+            </div>
+            <div className="form-group mr-3 ml-3">
+              <label for="exampleFormControlInput1">Photo URL 5:</label>
+              <input
+                type="text"
+                className="form-control"
+                id="photoURLGrid5"
+                placeholder="Example: Project 1"
+                value={newProject.photoURLGrid5}
+                onChange={handleInputFieldsForSubmit}
+              />
+            </div>
+            <div className="form-group mr-3 ml-3">
+              <label for="exampleFormControlInput1">Photo URL 6:</label>
+              <input
+                type="text"
+                className="form-control"
+                id="photoURLGrid6"
+                placeholder="Example: Project 1"
+                value={newProject.photoURLGrid6}
+                onChange={handleInputFieldsForSubmit}
+              />
+            </div>
+            <div className="form-group mr-3 ml-3">
+              <label for="exampleFormControlInput1">Photo URL 7:</label>
+              <input
+                type="text"
+                className="form-control"
+                id="photoURLGrid7"
+                placeholder="Example: Project 1"
+                value={newProject.photoURLGrid7}
+                onChange={handleInputFieldsForSubmit}
+              />
+            </div>
+            <div className="form-group mr-3 ml-3">
+              <label for="exampleFormControlInput1">Photo URL 8:</label>
+              <input
+                type="text"
+                className="form-control"
+                id="photoURLGrid8"
+                placeholder="Example: Project 1"
+                value={newProject.photoURLGrid8}
+                onChange={handleInputFieldsForSubmit}
+              />
+            </div>
             <button class="btn btn-primary ml-3 mb-2" type="submit">
               Create Project
             </button>

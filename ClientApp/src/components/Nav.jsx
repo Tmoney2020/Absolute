@@ -7,7 +7,7 @@ export function Nav(props) {
     <nav className="navbar navbar-expand-lg navbar-light bg-primary">
         <div className="d-flex flex-grow-1">
             <span className="w-100 d-sm-none d-block text-left"/>
-            <a className="navbar-brand d-lg-inline-block text-light" href="#">
+            <a className="navbar-brand d-lg-inline-block text-light" href="/">
                 Absolute Kitchen & Flooring
             </a>
             <div className="w-100 text-right">
@@ -23,16 +23,13 @@ export function Nav(props) {
     
             <ul className="navbar-nav ml-auto flex-nowrap">
                 <li className="nav-item">
-                    <a href="#" className="nav-link m-2 menu-item nav-active text-light">About Us</a>
+                    <a href="/aboutus" className="nav-link m-2 menu-item nav-active text-light">About Us</a>
                 </li>
                 <li className="nav-item">
-                    <a href="#" className="nav-link m-2 menu-item text-light">Projects</a>
+                    <a href="/" className="nav-link m-2 menu-item text-light">Projects</a>
                 </li>
                 <li className="nav-item">
-                    <a href="#" className="nav-link m-2 menu-item text-light">Products</a>
-                </li>
-                <li className="nav-item">
-                    <a href="#" className="nav-link m-2 menu-item text-light">Contact Us</a>
+                    <a href="/contact" className="nav-link m-2 menu-item text-light">Contact Us</a>
                 </li>
             </ul>
         </div>

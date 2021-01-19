@@ -6,7 +6,7 @@ import React from 'react'
       <p>Absolute Flooring & Kitchen</p>
       <p>4305 Clark Rd, Sarasota, FL 34233</p>
       <p>
-        <a href="#" className="footer-contact">Contact Us</a>
+        <a href="/contact" className="footer-contact">Contact Us</a>
       </p>
     </footer>
     )

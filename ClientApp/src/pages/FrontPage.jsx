@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 function SingleProjectForList (props) {
   return (
+    <Link 
+    to={`/Projects/${props.project.id}`}
+    >
     <div className="job m-5">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFC9h2YBWRhibWKbdpHlLQpvDUmUcnzXCzSVaPsd_1FyS_tPebe1tNR-i8qQ&usqp=CAc" className="mr-3" alt="..." />
+      <img src={props.project.photoURL} className="jobPhoto mr-3" alt="..." />
       <div>
         <h5 className="mt-1">
-          <a href="#">{props.project.title}</a>
+          {props.project.title}
         </h5>
         {props.project.shortDescription}
       </div>
     </div>
+    </Link>
   )
 }
 

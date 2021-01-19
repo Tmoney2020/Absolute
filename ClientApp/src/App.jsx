@@ -25,7 +25,7 @@ export function App() {
   <Route exact path="/">
     <FrontPage />
   </Route>
-  <Route path="/project/:id">
+  <Route path="/projects/:id">
     <Projects />
   </Route>
   <Route path="/contact">
