@@ -14,6 +14,7 @@ title: '',
 shortDescription: '',
 longDescription: '',
 materials: '',
+photoURL: '',
 photoURLGrid1: '',
 photoURLGrid2: '',
 photoURLGrid3: '',
@@ -153,7 +154,7 @@ const { getRootProps, getInputProps, isDragActive } = useDropzone({
                 onChange={handleInputFieldsForSubmit}
               ></textarea>
             </div>
-            <div className="file-drop-zone alert alert-primary">
+            {/* <div className="file-drop-zone alert alert-primary">
               <div {...getRootProps()}>
                 <input
                 {...getInputProps()} />
@@ -161,7 +162,18 @@ const { getRootProps, getInputProps, isDragActive } = useDropzone({
                   ? 'Drop the files here ...'
                   : 'Drag a picture of the restaurant here to upload!'}
               </div>
-          </div>
+          </div> */}
+             <div className="form-group mr-3 ml-3">
+              <label for="exampleFormControlInput1">Photo URL:</label>
+              <input
+                type="text"
+                className="form-control"
+                id="photoURLGrid1"
+                placeholder="Example: Project 1"
+                value={newProject.photoURL}
+                onChange={handleInputFieldsForSubmit}
+              />
+            </div>
           <div className="form-group mr-3 ml-3">
               <label for="exampleFormControlInput1">Photo URL 1:</label>
               <input
