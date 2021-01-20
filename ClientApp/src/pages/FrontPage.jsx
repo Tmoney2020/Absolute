@@ -36,7 +36,7 @@ export function FrontPage(props) {
       <p className="lead">Exceptional Quality at Afforable Prices!</p>
       <hr className="my-3" />
       <p>Contact us for a free estimate</p>
-      <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      <a className="btn btn-primary btn-lg" href="/contact" role="button">Learn more</a>
     </div>
       <div className="job-grid">
         {projects.map(project => (
