@@ -168,7 +168,7 @@ const { getRootProps, getInputProps, isDragActive } = useDropzone({
               <input
                 type="text"
                 className="form-control"
-                id="photoURLGrid1"
+                id="photoURL"
                 placeholder="Example: Project 1"
                 value={newProject.photoURL}
                 onChange={handleInputFieldsForSubmit}
