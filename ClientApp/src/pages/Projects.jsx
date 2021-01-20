@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router'
+import { useHistory, useParams } from 'react-router'
 
 export function Projects(props) {
 
 const params = useParams()
 const id = params.id
+
+const history = useHistory()
 
 const [Project, SetProject] = useState({
   title: '',
@@ -33,6 +35,19 @@ const [Project, SetProject] = useState({
   
     fetchProject()
   }, [id])
+
+  async function handleDelete(event) {
+    event.preventDefault()
+  
+    const response = await fetch(`/api/Projects/${id}`, {
+      method: 'DELETE',
+      headers: { 'content-type': 'application/json'},
+    })
+  
+    if (response.status === 200 || response.status === 204) {
+      history.push('/')
+    }
+  }
 
 
   return (
@@ -65,6 +80,7 @@ const [Project, SetProject] = useState({
   </div>
 </div>
 </div>
+    <button onClick={handleDelete}>Delete</button>
     </>
   )
 } 

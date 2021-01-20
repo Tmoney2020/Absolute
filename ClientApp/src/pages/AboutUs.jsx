@@ -6,14 +6,10 @@ function SingleCommentForList (props) {
   return (
     <div className="card mb-2">
     <div className="row no-gutters">
-      <div className="col-sm-4">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAaDWBUcfsD44z-flbqvQtQ6lVHTprrhfPpw&usqp=CAU" className="card-img" alt="..."/>
-      </div>
       <div className="col-md-8">
         <div className="card-body">
           <h5 className="card-title">{props.comment.name}</h5>
           <p className="card-text">{props.comment.body}</p>
-          <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
         </div>
       </div>
     </div>
@@ -87,7 +83,9 @@ return (
       <div className="commentContainer mt-4">
         <h1>Post a Comment</h1>
         <p className="text-center">Leave a here comment here.</p>
-        <input
+        <textarea
+            rows="1"
+            className="name"
             maxLength="15"
             placeholder="Name"
             id="name"
