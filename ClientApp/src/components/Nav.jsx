@@ -8,7 +8,7 @@ export function Nav(props) {
         <div className="d-flex flex-grow-1">
             <span className="w-100 d-sm-none d-block text-left"/>
             <a className="navbar-brand d-lg-inline-block text-light" href="/">
-                Absolute Kitchen & Flooring
+                Absolute Flooring & Kitchen
             </a>
             <div className="w-100 text-right">
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" onClick={() => setNavbarIsOpen(!navbarIsOpen)}>
