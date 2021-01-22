@@ -15,7 +15,7 @@ export function Contact(props) {
     <h5><strong><u>Contact Information:</u></strong></h5>
     <p><strong>Phone:</strong> (941) 925-2900 </p>
     <p><strong>Address:</strong> 4305 Clark Rd, Sarasota, Fl, 34233</p>
-    <p><strong>Email:</strong> Absoluteflooring@verizon</p>
+    <p><strong>Email:</strong> Absoluteflooring@verizon.net</p>
     </div>
     <div>
       <h5><strong><u>Store Hours:</u></strong></h5>
